@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Base & Reset Setup
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #050505;
+  --surface-color: #0d0d0d;
+  --border-color: #222222;
+  --text-main: #e5e5e5;
+  --text-muted: #888888;
+  --accent-color: #ffffff;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-stack);
+  line-height: 1.5;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Header Section
+   ========================================================================== */
+header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+/* ==========================================================================
+   Main Layout: Grid & Side-by-Side Containers
+   ========================================================================== */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section, footer {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Audio Player Section
+   ========================================================================== */
+article {
+  margin-bottom: 1.2rem;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+audio {
+  width: 100%;
+  height: 36px;
+  filter: invert(100%) hue-rotate(180deg); /* Fits dark background styling */
+}
+
+/* ==========================================================================
+   Services List Section
+   ========================================================================== */
+ul {
+  list-style: none;
+}
+
+main section ul li {
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+main section ul li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   Biography & Footer Section
+   ========================================================================== */
+footer {
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+footer ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+footer ul li a:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
