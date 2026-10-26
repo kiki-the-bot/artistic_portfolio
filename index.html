@@ -11,46 +11,81 @@
     <source src="assets/Coolgif.mp4" type="video/mp4">
   </video>
 
+
   <div class="video-overlay"></div>
+
+  
 
   <header>
     <h1>djguaracha</h1>
   </header>
 
+  <article class="socials">
+    <div>
+    <ul class="social-list">
+      <li><a href="mailto:guaracha_contact@proton.me" class="linkbox">Email Me </a></li>
+      <li><a href="https://www.youtube.com/@djguaracha_xxx" class="linkbox">YouTube </a></li>
+      <li><a href="https://djguaracha.bandcamp.com/" class="linkbox">Bandcamp </a></li>
+      <li><a href="https://soundcloud.com/djguaracha_xxx" class="linkbox">SoundCloud </a></li>
+    </ul>
+    </div>
+  </article>
+
+
   <section class="bio-header">
     <div class="bio">
-    <h2>Biography</h2>
-    <p>With 10 years of music production experience under their belt, djguaracha has developed a fine ear for detail.</p>
-    <ul>
-      <li><a href="mailto:guaracha_contact@proton.me">Email Me</a></li>
-      <li><a href="https://www.youtube.com/@djguaracha_xxx">YouTube</a></li>
-      <li><a href="https://djguaracha.bandcamp.com/">Bandcamp</a></li>
-      <li><a href="https://soundcloud.com/djguaracha_xxx">SoundCloud</a></li>
-    </ul>
+    <h2>About us:</h2>
+    <p>Started in FL Studio circa 2016, DJGUARACHA represents the latest stage of a decade long exercise in auditory and emotional synthesis. Built on an vast range of influences such as the ambient garage of XXYYXX, the progressive architecture of Hernan Cattaneo, John Digweed, and Nick Warren, the raw rock energy of Foo Fighters and RHCP, and the sub-bass devastation of Excision.
+        We see rigid genre labels as a mere jail, that is why, DJ GUARACHA functions as a temporary conceptual anchor: a hyper-specific identity deployed to navigate low-frequency dynamics, Sonidero chaos, and raw emotional output. Subject to continuous iteration.</p>
     </div>
   </section>
 
-  <!-- 3 Side-by-Side Boxes -->
-  <main>
-    <section>
+
+
+<main>
+  <section class="catalog-section">
+    <!-- Header wrapper to align heading and nav buttons side-by-side -->
+    <div class="catalog-header">
+      <h2>Catalog</h2>    <!-- Scroll track ONLY holds beat cards -->
+    <div id="catalogScroll" class="scroll">
       <article class="beat-card">
         <h3>BEAT 01 (160bpm)</h3>
-          <audio controls src="audio/beat_djguaracha_160bpm_cminor.mp3"></audio>
-            <div class="beat-actions">
-              <a href="audio/beat_djguaracha_160bpm_cminor.mp3" download class="btn-secondary">Download Tagged MP3 (Free)</a>
-              <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
-            </div>
+        <audio controls src="audio/beat_djguaracha_160bpm_cminor.mp3"></audio>
+        <div class="beat-actions">
+          <a href="audio/beat_djguaracha_160bpm_cminor.mp3" download class="btn-secondary">Download Tagged MP3 (Free)</a>
+          <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
+        </div>
       </article>
-    </section>
 
-    <section>
-      <h2>Work & Services</h2>
-      <ul>
-        <li>Custom Music Production & Beat Licensing</li>
-        <li>Audio Mixing, Mastering & Sound Design</li>
-      </ul>
-    </section>
-  </main>
+      <article class="beat-card">
+        <h3>BEAT 02 (170bpm)</h3>
+        <audio controls src="audio/beat2_djguaracha_170bpm_aminorM.wav"></audio>
+        <div class="beat-actions">
+          <!-- Fixed href for Beat 02 -->
+          <a href="audio/beat2_djguaracha_170bpm_aminorM.wav" download class="btn-secondary">Download Tagged MP3 (Free)</a>
+          <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
 
+<section class="soundcloud-card">
+  <h2>Latest Releases // SoundCloud</h2>
+  <div class="sc-wrapper">
+    <iframe 
+      width="100%" 
+      height="300" 
+      scrolling="yes" 
+      frameborder="no" 
+      autoplay="no" 
+      src="https://soundcloud.com/djguaracha_xxx/sets/releases?si=3ba9f17c31224bae904a83544a1947e0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+    </iframe>
+  </div>
+</section>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
