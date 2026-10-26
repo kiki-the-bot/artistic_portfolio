@@ -1,0 +1,250 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #050505;
+  --surface-color: #0d0d0d;
+  --border-color: #222222;
+  --text-main: #e5e5e5;
+  --text-muted: #888888;
+  --accent-color: #ffffff;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, Audio Nugget;
+}
+
+@font-face {
+  font-family: 'Induction';
+  src: url('assets/Induction.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -2;      
+  pointer-events: none; 
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(54, 54, 54, 0.75); /* 75% pitch black tint */
+  z-index: -1;       
+  pointer-events: none;
+  opacity: 5;
+}
+
+body {
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  color: var(--text-main);
+  font-family: var(--font-stack);
+  line-height: 1.5;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+/* 
+   Header Section
+ */
+   header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 4.3rem;
+  font-family: 'Induction', monospace;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  display: flex;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section{
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+
+article {
+  margin-bottom: 1.2rem;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+audio {
+  width: 100%;
+  height: 36px;
+  filter: invert(100%) hue-rotate(180deg); 
+}
+
+
+ul {
+  list-style: none;
+}
+
+main section ul li {
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+main section ul li:last-child {
+  border-bottom: none;
+}
+
+
+.bio-header{
+ display: flex;
+  /*flex-direction: row;     
+    align-items: center;    
+    justify-content: flex-start;*/ 
+  gap: 1rem;            
+  
+  padding: 1.5rem;
+  border-bottom: 1px solid #222222;
+  
+}
+
+section {
+  margin-top: 0;
+  flex-direction: row;
+}
+
+section h2 {
+  flex-direction: row;
+}
+
+section p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  flex-direction: row;
+}
+
+section ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+section ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+section ul li a:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.beat-card {
+  background-color: #0d0d0d;
+  border: 1px solid #222222;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.beat-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+
+.btn-secondary {
+  color: #888888;
+  border: 1px solid #222222;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  border-color: #888888;
+}
+
+.btn-primary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
