@@ -8,19 +8,19 @@
 }
 
 :root {
-  --bg-color: #050505;
+  --bg-color: #05050500;
   --surface-color: #0d0d0d;
   --surface-hover: #171717;
-  --border-color: #222222;
-  --text-main: #e5e5e5;
-  --text-muted: #888888;
+  --border-color: #22222200;
+  --text-main: #ffffff;
+  --text-muted: #ffffff;
   --accent-color: #ffffff;
   --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @font-face {
-  font-family: 'Induction';
-  src: url('assets/Induction.otf') format('opentype');
+  font-family: 'FiraCode';
+  src: url('assets/FiraCode-Retina.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -58,8 +58,8 @@ body {
   color: var(--text-main);
   font-family: var(--font-stack);
   line-height: 1.6;
-  padding: 2rem 1.5rem;
-  max-width: 1100px;
+  padding: 0.4rem 0rem;
+  max-width: 1500px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -67,23 +67,37 @@ body {
   gap: 2.5rem; /* Clean vertical spacing between major sections */
 }
 
-/* ==========================================================================
-   4. HEADER
-   ========================================================================== */
+
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: FiraCode;
+}
+
+
 header {
   text-align: center;
-  padding-top: 1rem;
-  background-image: url('assets/Graffitdesign.png');
+  padding-top: 2rem;
+  /*background-image: url('assets/Graffitdesign.png'); */
   background-size: 80% 130px;
   background-position: center;
-  size: 200px 200px;
+  size: 150px 150px;
   background-repeat: no-repeat;
+}
+ 
+
+.spinning-svg {
+  width: 60%;
+  height: 700px;
+  display: block;
+  margin: 0 auto;
 }
 
 header h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem); /* Responsive title sizing */
-  font-family: 'Induction', monospace, sans-serif;
-  letter-spacing: -0.02em;
+  font-size: 50px; /* Responsive title sizing */
+  font-family: 'Induction';
+  letter-spacing: 0em;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -95,7 +109,6 @@ header h1 {
    ========================================================================== */
 section {
   border: 1px solid var(--border-color);
-  padding: 1.5rem;
   border-radius: 5px;
   background-color: var(--bg-color);
 }
@@ -113,14 +126,45 @@ h2 {
 p {
   font-size: 0.95rem;
   color: var(--text-main);
+  font-family: FiraCode;
+  
 }
+
+
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #bbff01; 
+  color: hwb(0 0% 100%);                    
+  padding: 0.3rem 0;
+  font-family: FiraCode;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-track span {
+  padding-right: 2rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(-50%); }
+}
+
+
 
 /* ==========================================================================
    6. BIO / ABOUT SECTION
    ========================================================================== */
 .bio-header .bio p {
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: -5rem;
+  
 }
 
 /* Social Links List */
@@ -195,7 +239,6 @@ main {
 }
 
 .scroll {
-  -ms-overflow-style: none;
   width: auto ;  /* IE and Edge */
   scrollbar-width: none;
   display: flex;
@@ -204,7 +247,7 @@ main {
   scroll-snap-type: x mandatory; /* Snaps cards cleanly into place */
   scroll-behavior: smooth;
   padding-bottom: 1rem; /* Space so scrollbar doesn't overlap cards */
-  -webkit-overflow-scrolling: touch; /* Smooth inertia scrolling on iOS */
+  justify-content: center;
 }
 
 .catalog-scroll .beat-card {
@@ -222,7 +265,7 @@ main {
 
 .catalog-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
 }
