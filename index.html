@@ -7,22 +7,39 @@
 </head>
 <body>
 
-  <!-- Title Section -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="assets/Coolgif.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-overlay"></div>
+
   <header>
     <h1>djguaracha</h1>
   </header>
 
+  <section class="bio-header">
+    <div class="bio">
+    <h2>Biography</h2>
+    <p>With 10 years of music production experience under their belt, djguaracha has developed a fine ear for detail.</p>
+    <ul>
+      <li><a href="mailto:guaracha_contact@proton.me">Email Me</a></li>
+      <li><a href="https://www.youtube.com/@djguaracha_xxx">YouTube</a></li>
+      <li><a href="https://djguaracha.bandcamp.com/">Bandcamp</a></li>
+      <li><a href="https://soundcloud.com/djguaracha_xxx">SoundCloud</a></li>
+    </ul>
+    </div>
+  </section>
+
   <!-- 3 Side-by-Side Boxes -->
   <main>
     <section>
-      <h2>Audio Samples</h2>
-      <article>
-        <h3>Track 1</h3>
-        <audio controls src="track1.mp3"></audio>
-      </article>
-      <article>
-        <h3>Track 2</h3>
-        <audio controls src="track2.mp3"></audio>
+      <article class="beat-card">
+        <h3>BEAT 01 (160bpm)</h3>
+          <audio controls src="audio/beat_djguaracha_160bpm_cminor.mp3"></audio>
+            <div class="beat-actions">
+              <a href="audio/beat_djguaracha_160bpm_cminor.mp3" download class="btn-secondary">Download Tagged MP3 (Free)</a>
+              <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
+            </div>
       </article>
     </section>
 
@@ -34,17 +51,6 @@
       </ul>
     </section>
   </main>
-
-  <!-- Biography Box -->
-  <footer>
-    <h2>Biography</h2>
-    <p>With 10 years of music production experience under their belt, djguaracha has developed a fine ear for detail.</p>
-    <ul>
-      <li><a href="mailto:guaracha_contact@proton.me">Email Me</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">SoundCloud</a></li>
-    </ul>
-  </footer>
 
 </body>
 </html>
