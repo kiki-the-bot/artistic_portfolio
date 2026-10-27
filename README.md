@@ -1,1 +1,0 @@
-# artistic_portfolio

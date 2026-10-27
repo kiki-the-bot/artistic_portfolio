@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>djguaracha</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/wavesurfer.js@7"></script>
 </head>
 <body>
+
+
 
     <div class="video-overlay"></div>
 
@@ -32,41 +35,31 @@
     </div>
   </article>
 
-
-
-  <section class="bio-header">
-    <div class="bio">
-    <h2>About us:</h2>
-    <p>DJGUARACHA's upbringing always had a soundtrack, giving them the urge to recreate all the sounds and textures they heard in their favorite songs. Completly careless of any limitation, their taste has been esculpted by artists ranging from Los Askis, to Iglooghost, XXYYXX, Armin Van Buren, John Digweed and Big L just to mention some of them. Given they grew up somewhere in Mexico City, they felt the need to combine the rich sonidero and street mexican culture with the abstract concepts he liked from IDM and Electronic music. After a 10 year long journey, we can finally say we've reached a stage where we have achieved such combination to perfection, however, there has been many identities to our esence and there will continue to be. 
-
-    </div>
+  <section>
+    <h2>_sys_logs_</h2>
+    <p>DJGUARACHA's upbringing always had a soundtrack, giving them the urge to recreate all the sounds and textures they heard in their favorite songs. Completly careless of any limitation, their taste has been esculpted by artists ranging from Los Askis, to Iglooghost, XXYYXX, Armin Van Buren, John Digweed and Big L just to mention some of them. Given they grew up somewhere in Mexico City, they felt the need to combine the rich sonidero and street mexican culture with the abstract visual and auditive concepts he liked from IDM and Electronic music. After a 10 year long journey, we can finally say we've reached a stage where we have achieved such combination to perfection.
+      This is just one of the many identities we've used to express our passion for art and it won't be the last one. 
   </section>
 
 <img src="assets/freaky.svg" alt="Logo" class="spinning-svg">
 
-<main>
-  <section class="catalog-section">
-    <div id="catalogScroll" class="scroll">
-      <article class="beat-card">
-        <h3>BEAT 01 (160bpm)</h3>
-        <audio controls src="audio/beat_djguaracha_160bpm_cminor.mp3"></audio>
-        <div class="beat-actions">
-          <a href="audio/beat_djguaracha_160bpm_cminor.mp3" download class="btn-secondary">Download Tagged MP3 (Free)</a>
-          <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
-        </div>
-      </article>
 
-      <article class="beat-card">
-        <h3>BEAT 02 (170bpm)</h3>
-        <audio controls src="audio/beat2_djguaracha_170bpm_aminorM.wav"></audio>
-        <div class="beat-actions">
-          <a href="audio/beat2_djguaracha_170bpm_aminorM.wav" download class="btn-secondary">Download Tagged MP3 (Free)</a>
-          <a href="https://payhip.com/b/YourBeatID" target="_blank" class="btn-primary">Buy Untagged WAV ($35)</a>
-        </div>
-      </article>
-    </div>
+    <h3>░▒▓█[ FEATURED_BEATS ]█▓▒░</h3>
+  
+<main>
+      <section class="catalog">
+              <h1>[ beat 1 ]::::::::[ 0x0FF ]</h1>
+            <button id="playBtn" class="play-btn">▶</button>
+        <div class="track" id="waveform" data-audio="audio/beat1.mp3" ></div> 
+              <h1>[ beat 2 ]::::::::[ 0xFFF ]</h1> 
+        <button id="playBtn2" class="play-btn2" data-audio="audio/beat2.wav" >▶</button>
+        <div class="track" id="waveform2"></div>
   </section>
 </main>
+
+              
+
+
 
 <section class="soundcloud-card">
   <h2>Latest Releases</h2>
@@ -92,6 +85,47 @@
 <footer class="disclaimer">
   <a>Human made art for human consumption ©</a>
 </footer>
+
+<body>
+
+  <h3>SOFTWARE</h3>
+
+</body>
+
+<script type="module">
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
+
+const playbtn = document.getElementById("playBtn");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: '#bbff01',
+  progressColor: '#383351',
+  url: 'audio/beat1.mp3',
+  barWidth: '3',
+})
+
+playbtn.onclick = function(){
+  wavesurfer.playPause()
+
+}
+</script>
+
+<script type="module">
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
+
+const playbtn2 = document.getElementById("playBtn2");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform2',
+  waveColor: '#bbff01',
+  progressColor: '#383351',
+  url: 'audio/beat2.wav',
+  barWidth: '3',
+})
+
+playbtn2.onclick = function(){
+  wavesurfer.playPause()
+}
+</script>
 
 </body>
 </html>

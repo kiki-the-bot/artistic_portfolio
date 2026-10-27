@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. RESET & CSS VARIABLES
-   ========================================================================== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -25,9 +23,7 @@
   font-style: normal;
 }
 
-/* ==========================================================================
-   2. BACKGROUND VIDEO & OVERLAY
-   ========================================================================== */
+
 .bg-video {
   position: fixed;
   top: 0;
@@ -45,14 +41,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(59, 59, 59, 0.75); /* Clean 75% dark tint */
+  background-color: rgba(53, 53, 53, 0.75); /*tint*/
   z-index: -1;
   pointer-events: none;
 }
 
-/* ==========================================================================
-   3. BASE BODY & LAYOUT
-   ========================================================================== */
+/* main */
 body {
   color: var;
   color: var(--text-main);
@@ -64,8 +58,40 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem; /* Clean vertical spacing between major sections */
+  gap: 1.5rem; 
 }
+
+
+.play-btn {
+  background-color: #17171700;
+  color: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+}
+
+.play-btn2 {
+  background-color: #17171700;
+  color: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+}
+
 
 
 .disclaimer {
@@ -88,7 +114,7 @@ header {
  
 
 .spinning-svg {
-  width: 60%;
+  width: 100%;
   height: 700px;
   display: block;
   margin: 0 auto;
@@ -104,17 +130,20 @@ header h1 {
 
 }
 
-/* ==========================================================================
-   5. SECTIONS & CARDS (SHARED STYLES)
-   ========================================================================== */
 section {
-  border: 1px solid var(--border-color);
+  border: 1px solid #bbff0100;
   border-radius: 5px;
   background-color: var(--bg-color);
 }
 
+h1{
+  font-family: FiraCode;
+  text-transform: lowercase;
+  font-size: 1.2rem;
+}
+
 h2 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-main);
@@ -123,10 +152,23 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  justify-content: center;
+}
+
+
 p {
   font-size: 0.95rem;
   color: var(--text-main);
   font-family: FiraCode;
+  display: flex;
+  align-items: center;
   
 }
 
@@ -153,32 +195,27 @@ p {
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
-  50% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }
 }
 
-
-
-/* ==========================================================================
-   6. BIO / ABOUT SECTION
-   ========================================================================== */
-.bio-header .bio p {
-  color: var(--text-muted);
-  margin-bottom: -5rem;
-  
-}
 
 /* Social Links List */
-
 
 .social-list {
   color: #17171700 !important; 
   display: flex;
   flex-direction: row;
   gap: 100px ;
+  font-family: FiraCode;
   
 }
 
-
+#waveform {
+  background-color: #bbff0100;
+  border-radius: 0;                   
+  overflow: hidden;
+  width: 100%;
+}
 
 .socials{
   width: 100;
@@ -187,7 +224,6 @@ p {
 }
 
 .linkbox {
-  color: #000;
   color: var(--accent-color);
   text-decoration: none;
   font-size: 0.75rem;
@@ -201,6 +237,7 @@ p {
   gap: 8px;
   transition: all 0.2s ease;
   list-style: none;
+  border-color: #bbff01 ;
 }
 
 .linkbox:hover {
@@ -209,144 +246,16 @@ p {
   border-color: var(--accent-color);
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  pointer-events: none;
-}
+/* main preview gird */
 
-/* ==========================================================================
-   7. MAIN CONTENT & GRID
-   ========================================================================== */
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
-/* Beat Card Component */
-.beat-card {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--border-color);
-  padding: 1.2rem;
-  border-radius: 4px;
-  flex: 0 0 320px;
-}
 
-.scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.scroll {
-  width: auto ;  /* IE and Edge */
-  scrollbar-width: none;
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Snaps cards cleanly into place */
-  scroll-behavior: smooth;
-  padding-bottom: 1rem; /* Space so scrollbar doesn't overlap cards */
-  justify-content: center;
-}
-
-.catalog-scroll .beat-card {
-  flex: 0 0 320px; /* Width of each card (does not shrink) */
-  scroll-snap-align: start; /* Card snaps to the left edge when scrolling */
-}
-
-.beat-card h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-  color: var(--text-main);
-  letter-spacing: 0.05em;
-}
-
-.catalog-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.catalog-header h2 {
-  margin-bottom: 0; /* Prevents margin from throwing off vertical alignment */
-  border-bottom: none;
-}
-
-/* Dark Mode Inverted Audio Player */
-audio {
-  width: 100%;
-  height: 36px;
-  filter: invert(100%) hue-rotate(180deg);
-  border-radius: 4px;
-}
-
-/* Beat Action Buttons */
-.beat-actions {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.15s ease;
-  text-align: center;
-}
-
-.btn-secondary {
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-  background: transparent;
-}
-
-.btn-secondary:hover {
-  color: var(--accent-color);
-  border-color: var(--text-muted);
-}
-
-.btn-primary {
-  color: #000000;
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
-
-.btn-primary:hover {
-  background-color: #cccccc;
-  border-color: #cccccc;
-}
-
-/* Services Section List */
-
-.services {
-  width: 290px;
-  height: 230px;
-}
-
-.services ul {
-  list-style: none;
-}
-
-.services ul li {
-  font-size: 0.9rem;
-  padding: 0.7rem 0;
-  border-bottom: 1px solid var(--border-color);
-  color: var(--text-muted);
-}
-
-.services ul li:last-child {
-  border-bottom: none;
-}
+/* soundcloud section */
 
 .soundcloud-card {
   background-color: var(--surface-color);
@@ -356,17 +265,12 @@ audio {
 }
 
 .sc-wrapper {
-  border-radius: 4px;
-  overflow: hidden; /* Rounds the corners of the SoundCloud player */
+  border-radius: 0px;
+  overflow: hidden; 
   border: 1px solid var(--border-color);
 }
 
 .sc-wrapper iframe {
   display: block;
-  /* Darkens the widget background slightly */
   background: #000000; 
 }
-
-/* ==========================================================================
-   8. ACCENT GRAPHIC
-   ========================================================================== */
