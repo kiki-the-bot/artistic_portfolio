@@ -49,10 +49,12 @@
 <main>
       <section class="catalog">
               <h1>[ beat 1 ]::::::::[ 0x0FF ]</h1>
-            <button id="playBtn" class="play-btn">▶</button>
+            <button id="playBtn" class="btn">▶</button>
+            <button id="pausebtn" class="btn" >❚❚</button>
         <div class="track" id="waveform" data-audio="audio/beat1.mp3" ></div> 
               <h1>[ beat 2 ]::::::::[ 0xFFF ]</h1> 
-        <button id="playBtn2" class="play-btn2" data-audio="audio/beat2.wav" >▶</button>
+            <button id="playBtn2" class="btn" >▶</button>
+            <button id="pausebtn2" class="btn" >❚❚</button>
         <div class="track" id="waveform2"></div>
   </section>
 </main>
@@ -96,16 +98,22 @@
 import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
 
 const playbtn = document.getElementById("playBtn");
+const pausebtn = document.getElementById("pausebtn");
 const wavesurfer = WaveSurfer.create({
   container: '#waveform',
   waveColor: '#bbff01',
-  progressColor: '#383351',
+  progressColor: '#34353a',
   url: 'audio/beat1.mp3',
   barWidth: '3',
+  cursorColor: '#ddd5e9',
 })
 
 playbtn.onclick = function(){
-  wavesurfer.playPause()
+  wavesurfer.play()
+
+pausebtn.onclick = function(){
+  wavesurfer.pause()
+}
 
 }
 </script>
@@ -114,16 +122,22 @@ playbtn.onclick = function(){
 import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
 
 const playbtn2 = document.getElementById("playBtn2");
+const pausebtn2 = document.getElementById("pausebtn2");
 const wavesurfer = WaveSurfer.create({
   container: '#waveform2',
   waveColor: '#bbff01',
-  progressColor: '#383351',
+  progressColor: '#34353a',
   url: 'audio/beat2.wav',
   barWidth: '3',
+  cursorColor: '#ddd5e9',
 })
 
 playbtn2.onclick = function(){
-  wavesurfer.playPause()
+  wavesurfer.play()
+
+pausebtn2.onclick = function(){
+  wavesurfer.pause()
+}  
 }
 </script>
 
