@@ -1,0 +1,14 @@
+User-agent: CCBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Bytespider
+User-agent: Diffbot
+User-agent: FacebookBot
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: *
+Allow: /
