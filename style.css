@@ -33,7 +33,6 @@
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
-  opacity: 0;
 }
 
 .video-overlay {
