@@ -53,7 +53,7 @@ body {
   font-family: var(--font-stack);
   line-height: 1.2;
   padding: 0.4rem 0rem;
-  max-width: 1400px;
+  max-width: 900px;
   margin: 0 auto;
   min-height: 120vh;
   display: flex;
@@ -77,7 +77,7 @@ body {
   display: inline-block;
   color: #ffffff;
   transition: opacity 2s, 0.1s;
-  font-size: 80px;
+  font-size:4.5rem;
 }
 
 .btn:active .icon{
@@ -130,6 +130,7 @@ h1{
   font-family: FiraCode;
   text-transform: lowercase;
   font-size: 1.2rem;
+  padding: 10px;
 }
 
 h2 {
@@ -140,6 +141,7 @@ h2 {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 h3 {
@@ -150,12 +152,12 @@ h3 {
   text-transform: uppercase;
   color: var(--text-main);
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 
 p {
-  font-size: 0.95rem;
+  font-size: clamp(1.30rem, 1.30rem , 1.5rem);
   color: var(--text-main);
   font-family: FiraCode;
   display: flex;
@@ -196,7 +198,7 @@ p {
   color: #17171700 !important; 
   display: flex;
   flex-direction: row;
-  gap: 100px ;
+  gap: 20px ;
   font-family: FiraCode;
   
 }
@@ -265,4 +267,50 @@ main {
 .sc-wrapper iframe {
   display: block;
   background: #000000; 
+}
+
+.software-card {
+  background: #12121600;
+  border: 0px #22222c00;
+  padding: 1.25rem;
+  border-radius: 4px;
+  margin: 30px;
+}
+
+.flscreen{
+  max-width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.category-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: FiraCode;
+  letter-spacing: 1.5px;
+  color: #bbff01;
+}
+
+
+.software-card h3 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.software-card p {
+  font-size: clamp(1.20rem, 1.30rem, 1.31rem);
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Mobile Scroll Overflow Fix */
+@media (max-height: 700px) {
 }

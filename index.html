@@ -10,6 +10,10 @@
 <body>
 
 
+<footer class="disclaimer">
+  <a>All the designs and music shown are 100% original</a>
+</footer>
+
 
     <div class="video-overlay"></div>
 
@@ -57,13 +61,19 @@
             <button id="playBtn" class="btn">
               <span class="icon ">▶</span>
             </button>
+        <div class="track" id="waveform"></div>
 
-        <div class="track" id="waveform" ></div> 
               <h1>[ 002 ]::::::::[ 0xFFF ]</h1> 
             <button id="playBtn2" class="btn" >
               <span class="icon ">▶</span>
             </button>
         <div class="track" id="waveform2"></div>
+
+              <h1>[ 003 ]::::::::[ 0xFF0 ]</h1> 
+            <button id="playBtn3" class="btn" >
+              <span class="icon ">▶</span>
+            </button>
+        <div class="track" id="waveform3"></div>
   </section>
 </main>
 
@@ -78,28 +88,15 @@
   </div>
 </section>
 
-<div class="marquee-wrapper">
-  <div class="marquee-track">
-    <span>PURO TALENTO MEXA // addicted to bass // 0x00000 // chronically online // ♡(˃͈ ˂͈ ) //</span>
-    <span>PURO TALENTO MEXA // addicted to bass // 0x00000 // chronically online // ♡(˃͈ ˂͈ ) //</span>
-  </div>
-</div>
 
-<footer class="disclaimer">
-  <a>Human made art for human consumption ©</a>
-</footer>
 
-<body>
 
-  <h3>SOFTWARE</h3>
 
-</body>
 
 <script type="module">
 import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
 
 const playbtn = document.getElementById("playBtn");
-const pausebtn = document.getElementById("pausebtn");
 const wavesurfer = WaveSurfer.create({
   container: '#waveform',
   waveColor: '#bbff01',
@@ -122,7 +119,6 @@ playbtn.onclick = function(){
 import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
 
 const playbtn2 = document.getElementById("playBtn2");
-const pausebtn2 = document.getElementById("pausebtn2");
 const wavesurfer = WaveSurfer.create({
   container: '#waveform2',
   waveColor: '#bbff01',
@@ -142,6 +138,73 @@ playbtn2.onclick = function(){
 
 </script>
 
+<script type="module">
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
+
+const playbtn3 = document.getElementById("playBtn3");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform3',
+  waveColor: '#bbff01',
+  progressColor: '#34353a',
+  url: 'audio/cumbiatonprev.mp3',
+  barWidth: '3',
+  cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
+})
+
+playbtn3.onclick = function(){
+  wavesurfer.playPause()
+
+}
+
+</script>
+
+
+<h3>░▒▓█[ SOFTWAR3 ]█▓▒░</h3>
+
+<section id="software" class="snap-section">
+
+      <div class="software-card">
+        <div class="card-header">
+          <span class="category-tag">ARRANGEMENTS ≽(•⩊ •マ≼) </span>
+        </div>
+        <h1>FL Studio</h1>
+        <image src="assets/flscreen.png" class="flscreen"></image>
+      </div>
+
+      <div class="software-card">
+        <div class="card-header">
+          <span class="category-tag">SYNTHS, FX & SOUND DESIGN (¬_¬")</span>
+        </div>
+        <h1>Serum 2 / FabFilter suite / Ozone / unfiltered audio suite / kilohearts suite</h1>
+        <image src="assets/software used by me.jpg" class="flscreen"></image>
+      </div>
+
+      <!-- Card 3: Video & Graphics -->
+      <div class="software-card">
+        <div class="card-header">
+          <span class="category-tag">VISUAL & EDITING ٩(ˊᗜˋ*)و</span>
+        </div>
+        <h1>Vegas PRO / Photoshop</h1>
+        <image src="assets/vegasps.jpg" class="flscreen"></image>
+      </div>
+
+</section>
+
+<div class="marquee-wrapper">
+  <div class="marquee-track">
+    <span>PURO TALENTO MEXA // addicted to bass // 0x00000 // chronically online // ♡(˃͈ ˂͈ ) //</span>
+    <span>PURO TALENTO MEXA // addicted to bass // 0x00000 // chronically online // ♡(˃͈ ˂͈ ) //</span>
+  </div>
+</div>
+
+
+<footer class="disclaimer">
+  <a>Human made art for human consumption ©</a>
+</footer>
 
 </body>
 </html>
+
