@@ -13,7 +13,7 @@
   --text-main: #ffffff;
   --text-muted: #ffffff;
   --accent-color: #ffffff;
-  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 @font-face {
@@ -33,6 +33,7 @@
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
+  opacity: 0;
 }
 
 .video-overlay {
@@ -51,34 +52,38 @@ body {
   color: var;
   color: var(--text-main);
   font-family: var(--font-stack);
-  line-height: 1.6;
+  line-height: 1.2;
   padding: 0.4rem 0rem;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; 
+  gap: 1.2rem; 
 }
 
 
 .btn {
-  background-color: #17171700;
-  color: #ffffff;
+  background-color: #da090900;
+  border-color: #bbff01;
   border: none;
-  width: 100%;
+  width: 10%;
   height: auto;
   font-size: 1.2rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.1s ease;
+  display: inline-flex;
 }
 
+.btn .icon{
+  display: inline-block;
+  color: #ffffff;
+  transition: opacity 2s, 0.1s;
+  font-size: 80px;
+}
 
-
+.btn:active .icon{
+  opacity: 0;
+}
 
 .disclaimer {
   display: flex;
@@ -100,7 +105,7 @@ header {
  
 
 .spinning-svg {
-  width: 100%;
+  width: auto;
   height: 700px;
   display: block;
   margin: 0 auto;
@@ -139,13 +144,14 @@ h2 {
 }
 
 h3 {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  font-size: 1rem;
-  letter-spacing: 0.4em;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--text-main);
   justify-content: center;
+  padding: 20px;
 }
 
 
@@ -212,7 +218,7 @@ p {
 .linkbox {
   color: var(--accent-color);
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -223,12 +229,13 @@ p {
   gap: 8px;
   transition: all 0.2s ease;
   list-style: none;
-  border-color: #bbff01 ;
+  width: 200px;
+  justify-content: center;
 }
 
 .linkbox:hover {
   background-color: var(--accent-color);
-  color: var(--bg-color);
+  color: #000000;
   border-color: var(--accent-color);
 }
 

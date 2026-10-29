@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>djguaracha</title>
+  <title>djguarachaxxx</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/wavesurfer.js@7"></script>
+  <link rel="icon" type="image/png" href="assets/icon.png">
 </head>
 <body>
 
@@ -41,7 +42,7 @@
       This is just one of the many identities we've used to express our passion for art and it won't be the last one. 
   </section>
 
-  <h3>( -_•)╦̵̵̿╤─  〔6C696665〕 ─╤̵̵̿║[-_• )</h3>
+  <h3>( -_•)╦̵̵̿╤─  〔6C 69 66 65〕 ─╤̵̵̿║[-_• )</h3>
 
 <img src="assets/freaky.svg" alt="Logo" class="spinning-svg">
 
@@ -52,13 +53,16 @@
   
 <main>
       <section class="catalog">
-              <h1>[ beat 1 ]::::::::[ 0x0FF ]</h1>
-            <button id="playBtn" class="btn">▶</button>
-            <button id="pausebtn" class="btn" >❚❚</button>
+              <h1>[ 001 ]::::::::[ 0x0FF ]</h1>
+            <button id="playBtn" class="btn">
+              <span class="icon ">▶</span>
+            </button>
+
         <div class="track" id="waveform" ></div> 
-              <h1>[ beat 2 ]::::::::[ 0xFFF ]</h1> 
-            <button id="playBtn2" class="btn" >▶</button>
-            <button id="pausebtn2" class="btn" >❚❚</button>
+              <h1>[ 002 ]::::::::[ 0xFFF ]</h1> 
+            <button id="playBtn2" class="btn" >
+              <span class="icon ">▶</span>
+            </button>
         <div class="track" id="waveform2"></div>
   </section>
 </main>
@@ -103,14 +107,13 @@ const wavesurfer = WaveSurfer.create({
   url: 'audio/beat1.mp3',
   barWidth: '3',
   cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
 })
 
 playbtn.onclick = function(){
-  wavesurfer.play()
-
-pausebtn.onclick = function(){
-  wavesurfer.pause()
-}
+  wavesurfer.playPause()
 
 }
 </script>
@@ -127,16 +130,18 @@ const wavesurfer = WaveSurfer.create({
   url: 'audio/rottenbeat.mp3',
   barWidth: '3',
   cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
 })
 
 playbtn2.onclick = function(){
-  wavesurfer.play()
+  wavesurfer.playPause()
 
-pausebtn2.onclick = function(){
-  wavesurfer.pause()
-}  
 }
+
 </script>
+
 
 </body>
 </html>
