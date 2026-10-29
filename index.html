@@ -9,10 +9,20 @@
 </head>
 <body>
 
+<script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js"></script>
 
 <footer class="disclaimer">
   <a>All the designs and music shown are 100% original</a>
 </footer>
+
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/mDVo3rJo9wQ?autoplay=1&mute=1&loop=1&playlist=mDVo3rJo9wQ&controls=1&rel=0&modestbranding=1" 
+    title="Promo Video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
 
 
     <div class="video-overlay"></div>
@@ -60,6 +70,7 @@
               <h1>[ 001 ]::::::::[ 0x0FF ]</h1>
             <button id="playBtn" class="btn">
               <span class="icon ">▶</span>
+              
             </button>
         <div class="track" id="waveform"></div>
 
@@ -71,7 +82,8 @@
 
               <h1>[ 003 ]::::::::[ 0xFF0 ]</h1> 
             <button id="playBtn3" class="btn" >
-              <span class="icon ">▶</span>
+              <span class="icon">▶</span>
+              
             </button>
         <div class="track" id="waveform3"></div>
   </section>
@@ -87,80 +99,6 @@
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2320020075&color=%23292323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/djguaracha_xxx" title="djguaracha" target="_blank" style="color: #cccccc; text-decoration: none;">djguaracha</a> · <a href="https://soundcloud.com/djguaracha_xxx/sets/releases" title="Releases" target="_blank" style="color: #cccccc; text-decoration: none;">Releases</a></div>
   </div>
 </section>
-
-
-
-
-
-
-<script type="module">
-import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
-
-const playbtn = document.getElementById("playBtn");
-const wavesurfer = WaveSurfer.create({
-  container: '#waveform',
-  waveColor: '#bbff01',
-  progressColor: '#34353a',
-  url: 'audio/beat1.mp3',
-  barWidth: '3',
-  cursorColor: '#ddd5e9',
-  cursorWidth: 5,
-  dragToSeek: true,
-
-})
-
-playbtn.onclick = function(){
-  wavesurfer.playPause()
-
-}
-</script>
-
-<script type="module">
-import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
-
-const playbtn2 = document.getElementById("playBtn2");
-const wavesurfer = WaveSurfer.create({
-  container: '#waveform2',
-  waveColor: '#bbff01',
-  progressColor: '#34353a',
-  url: 'audio/rottenbeat.mp3',
-  barWidth: '3',
-  cursorColor: '#ddd5e9',
-  cursorWidth: 5,
-  dragToSeek: true,
-
-})
-
-playbtn2.onclick = function(){
-  wavesurfer.playPause()
-
-}
-
-</script>
-
-<script type="module">
-import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@8.0.0-beta.4/dist/wavesurfer.esm.js'
-
-const playbtn3 = document.getElementById("playBtn3");
-const wavesurfer = WaveSurfer.create({
-  container: '#waveform3',
-  waveColor: '#bbff01',
-  progressColor: '#34353a',
-  url: 'audio/cumbiatonprev.mp3',
-  barWidth: '3',
-  cursorColor: '#ddd5e9',
-  cursorWidth: 5,
-  dragToSeek: true,
-
-})
-
-playbtn3.onclick = function(){
-  wavesurfer.playPause()
-
-}
-
-</script>
-
 
 <h3>░▒▓█[ SOFTWAR3 ]█▓▒░</h3>
 
@@ -204,6 +142,73 @@ playbtn3.onclick = function(){
 <footer class="disclaimer">
   <a>Human made art for human consumption ©</a>
 </footer>
+
+<script type="module">
+
+const playbtn = document.getElementById("playBtn");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: '#bbff01',
+  progressColor: '#34353a',
+  url: 'audio/beat1.mp3',
+  barWidth: '3',
+  cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
+})
+
+playbtn.onclick = function(){
+  wavesurfer.playPause()
+
+
+}
+</script>
+
+<script type="module">
+
+const playbtn2 = document.getElementById("playBtn2");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform2',
+  waveColor: '#bbff01',
+  progressColor: '#34353a',
+  url: 'audio/rottenbeat.mp3',
+  barWidth: '3',
+  cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
+})
+
+playbtn2.onclick = function(){
+  wavesurfer.playPause()
+
+
+}
+</script>
+
+<script type="module">
+
+
+const playbtn3 = document.getElementById("playBtn3");
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform3',
+  waveColor: '#bbff01',
+  progressColor: '#34353a',
+  url: 'audio/cumbiatonprev.mp3',
+  barWidth: '3',
+  cursorColor: '#ddd5e9',
+  cursorWidth: 5,
+  dragToSeek: true,
+
+})
+
+playbtn3.onclick = function(){
+  wavesurfer.playPause()
+
+  
+}
+</script>
 
 </body>
 </html>
