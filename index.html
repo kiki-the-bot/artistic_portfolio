@@ -145,8 +145,10 @@
 
 <script type="module">
 
+const icon = document.getElementsByClassName("icon");
 const playbtn = document.getElementById("playBtn");
-const wavesurfer = WaveSurfer.create({
+const wavesurfer = WaveSurfer.create
+({
   container: '#waveform',
   waveColor: '#bbff01',
   progressColor: '#34353a',
@@ -160,9 +162,22 @@ const wavesurfer = WaveSurfer.create({
 
 playbtn.onclick = function(){
   wavesurfer.playPause()
+};
+
+wavesurfer.on('play', () => {
+  wavesurfer.setOptions({
+    waveColor: '#fffff',
+  })
+});
+
+wavesurfer.on('pause', () => {
+  wavesurfer.setOptions({
+    waveColor: '#bbff01',
+  })
+
+})
 
 
-}
 </script>
 
 <script type="module">
@@ -182,9 +197,21 @@ const wavesurfer = WaveSurfer.create({
 
 playbtn2.onclick = function(){
   wavesurfer.playPause()
+};
 
+wavesurfer.on('play', () => {
+  wavesurfer.setOptions({
+    waveColor: '#fffff',
+  })
+});
 
-}
+wavesurfer.on('pause', () => {
+  wavesurfer.setOptions({
+    waveColor: '#bbff01',
+  })
+
+})
+
 </script>
 
 <script type="module">
@@ -205,9 +232,20 @@ const wavesurfer = WaveSurfer.create({
 
 playbtn3.onclick = function(){
   wavesurfer.playPause()
+};
 
-  
-}
+wavesurfer.on('play', () => {
+  wavesurfer.setOptions({
+    waveColor: '#fffff',
+  })
+});
+
+wavesurfer.on('pause', () => {
+  wavesurfer.setOptions({
+    waveColor: '#bbff01',
+  })
+
+})
 </script>
 
 </body>
