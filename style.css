@@ -150,14 +150,17 @@ h1{
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-main);
+  color: #bbff01;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
   width: 100%;
+  align-content: center;
+  justify-content: center;
+  display: flex;
 }
 
 h3 {
@@ -174,6 +177,15 @@ h3 {
 
 p {
   font-size: clamp(1.30rem, 1.30rem , 1.5rem);
+  color: var(--text-main);
+  font-family: FiraCode;
+  display: flex;
+  align-items: center;
+  
+}
+
+p2 {
+  font-size: clamp(1.10rem, 1.10rem , 1.5rem);
   color: var(--text-main);
   font-family: FiraCode;
   display: flex;
