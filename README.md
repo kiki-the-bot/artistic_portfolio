@@ -1,0 +1,2 @@
+This project is a lightweight Web portfolio / press kit for an artist with no frameworks. It uses vainilla JS and HTML. The decision to use vainilla JS was made so that whoever navigated on the page was able to browse through it
+with no friction.
